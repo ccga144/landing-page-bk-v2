@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer King</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo-burger-king.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="#">Pedir Produto</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Dúvidas Frequentes</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/chicken-crisp.png" alt="">
+                <div>Chicken Crisp</div>
+                <section class="produto--more">
+                    Pão de brioche, um delicioso e suculento filé de peito de frango crocante, maionese, alface, tomate e duas fatias de queijo cheddar. Todos esses ingredientes são cuidadosamente armazenados e preparados para você se deliciar com um sanduíche fresquinho e de alta qualidade.
+                </section>
+            </section>
+
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/whopper.png" alt="">
+                <div>Whopper</div>
+                <section class="produto--more">
+                    Pão com gergelim, maionese, alface, tomate, cebola, ketchup, picles, queijo derretido e um suculento hambúrguer de pura carne bovina. Todos esses ingredientes são cuidadosamente armazenados e preparados, para você se deliciar com um sanduíche fresquinho e de alta qualidade.
+                </section>
+            </section>
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/shake-doce-de-leite.png" alt="">
+                <div>Shake Doce de Leite</div>
+                <section class="produto--more">
+                    O Shake pode ser sua sobremesa ou seu acompanhamento. Esta versão vem no sabor Doce de Leite.
+                </section>
+            </section>
+
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/shake-de-baunilha.png" alt="">
+                <div>Shake Baunilha</div>
+                <section class="produto--more">
+                    O Shake pode ser sua sobremesa ou seu acompanhamento. Esta versão vem no sabor Baunilha.
+                </section>
+            </section>
+
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/balde-de-batata.png" alt="">
+                <div>Balde de Batata</div>
+                <section class="produto--more">
+                    Nossas crocantes e irresistíveis batatas fritas agora na versão balde!
+                </section>
+            </section>
+
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+        <section class="produto">
+            <section class="produto--presentation">
+                <img src="imagens/batata-frita.png" alt="">
+                <div>Batata Frita</div>
+                <section class="produto--more">
+                    Crocantes e irresistíveis, nossas batatas fritas podem vir no tamanho pequeno, médio e grande e são servidas sempre levemente salgadas. Estas delícias são o acompanhamento perfeito para o seu sanduíche perfeito
+                </section>
+            </section>
+
+            <section class="produto--button">
+                <button class="produto--button--element">
+                    Pedir Produto
+                </button>
+            </section>
+        </section>
+        <!--Terminação de produto-->
+    </main>
+    <script>
+        const produto = document.querySelector('section.produto--presentation')
+        produto.addEventListener("mouseout", mouseOutProduto)
+
+        function mouseOutProduto(event){
+            const produtoCurrent = event.target 
+            if (produtoCurrent.classList.contains('closing')){
+                
+            }
+        }
+    </script>
+</body>
+</html>
