@@ -118,15 +118,42 @@
         <!--Terminação de produto-->
     </main>
     <script>
-        const produto = document.querySelector('section.produto--presentation')
-        produto.addEventListener("mouseout", mouseOutProduto)
-
-        function mouseOutProduto(event){
-            const produtoCurrent = event.target 
-            if (produtoCurrent.classList.contains('closing')){
-                
-            }
+    const produto = document.querySelectorAll('section.produto')
+    console.log(produto[0].tagName)
+        function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+        
+        for(i in produto){
+            produto[i].addEventListener('mouseout', mouseOutProduto)
         }
+        
+
+        async function mouseOutProduto(event){
+            const produtoCurrent = event.target 
+
+            if (produtoCurrent.classList.contains('produto--more')) {
+                console.log(produtoCurrent)
+                if (produtoCurrent.classList.contains('closing-of-more')){
+                    produtoCurrent.classList.remove('closing-of-more')
+                } else{
+                    produtoCurrent.classList += ' closing-of-more'
+                    await sleep(1000)
+                    produtoCurrent.classList.remove('closing-of-more')
+                }
+
+            } else{
+            const produtoCurrentTry = produtoCurrent.parentNode.children[produtoCurrent.parentNode.children.length - 1]
+             if (produtoCurrentTry.classList.contains('produto--button') == false && produtoCurrentTry.classList.contains('produto--button--element') == false && produtoCurrentTry.classList.contains('produto') == false ){
+                 console.log(produtoCurrentTry.tagName)
+                if (produtoCurrentTry.classList.contains('closing-of-more')){
+                    produtoCurrentTry.classList.remove('closing-of-more')
+                } else{
+                    produtoCurrentTry.classList += ' closing-of-more'
+                    await sleep(1000)
+                    produtoCurrentTry.classList.remove('closing-of-more')
+                }
+            }}}
     </script>
 </body>
 </html>
